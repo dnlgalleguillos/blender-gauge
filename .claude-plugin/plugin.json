@@ -1,0 +1,10 @@
+{
+  "name": "blender-gauge",
+  "version": "0.1.0",
+  "description": "Skills for AI agents working in Blender 5.x that measure their own work: mesh health, PBR checks, Geometry Nodes counts, framing and exposure, reference matching, export round-trips.",
+  "author": { "name": "Daniel Galleguillos Cruz" },
+  "homepage": "https://github.com/dnlgalleguillos/blender-gauge",
+  "repository": "https://github.com/dnlgalleguillos/blender-gauge",
+  "license": "MIT",
+  "keywords": ["blender", "bpy", "3d", "geometry-nodes", "pbr", "rendering", "agent-skills", "mcp"]
+}

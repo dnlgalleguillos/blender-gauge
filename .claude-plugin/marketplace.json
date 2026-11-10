@@ -1,0 +1,12 @@
+{
+  "name": "blender-gauge",
+  "description": "Blender skills with built-in measurement",
+  "owner": { "name": "Daniel Galleguillos Cruz" },
+  "plugins": [
+    {
+      "name": "blender-gauge",
+      "source": "./",
+      "description": "8 skills that build in Blender and verify the result with numbers: scene, modeling, materials, Geometry Nodes, light and render, reference matching, export"
+    }
+  ]
+}

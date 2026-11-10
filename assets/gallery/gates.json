@@ -1,0 +1,2182 @@
+{
+ "crate": [
+  {
+   "gate": "build-prop",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "loose_verts",
+     "value": 0,
+     "ok": true,
+     "limit": 0
+    },
+    {
+     "name": "zero_area_faces",
+     "value": 0,
+     "ok": true,
+     "limit": 0
+    },
+    {
+     "name": "duplicate_verts",
+     "value": 0,
+     "ok": true,
+     "limit": 0
+    },
+    {
+     "name": "non_manifold_edges",
+     "value": 0,
+     "ok": true,
+     "limit": 0
+    },
+    {
+     "name": "inverted_volume",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "ngons",
+     "value": 14,
+     "ok": true,
+     "limit": "<= 200"
+    }
+   ],
+   "info": {
+    "parts": [
+     "crate_body",
+     "crate_lid",
+     "crate_strap_a",
+     "crate_strap_b",
+     "crate_plate",
+     "crate_bolt_0",
+     "crate_bolt_1",
+     "crate_bolt_2",
+     "crate_bolt_3"
+    ],
+    "size_m": [
+     0.94,
+     0.678,
+     0.52
+    ],
+    "meshes": {
+     "objects": 9,
+     "verts": 704,
+     "faces": 638,
+     "triangles": 1380
+    }
+   }
+  },
+  {
+   "gate": "material-health",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "empty_material_slots",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "materials_found",
+     "value": 4,
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "mat_wood: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_wood: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_wood: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_wood: output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "mat_wood: image_nodes_have_image",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_wood: data_textures_non_color",
+     "value": [],
+     "ok": true,
+     "limit": "Non-Color"
+    },
+    {
+     "name": "mat_wood: metallic_binary",
+     "value": 0.0,
+     "ok": true,
+     "limit": "0/1",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_wood: roughness_floor",
+     "value": 0.52,
+     "ok": true,
+     "limit": ">= 0.02",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_dark_wood: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_dark_wood: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_dark_wood: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_dark_wood: output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "mat_dark_wood: image_nodes_have_image",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_dark_wood: data_textures_non_color",
+     "value": [],
+     "ok": true,
+     "limit": "Non-Color"
+    },
+    {
+     "name": "mat_dark_wood: metallic_binary",
+     "value": 0.0,
+     "ok": true,
+     "limit": "0/1",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_dark_wood: roughness_floor",
+     "value": 0.52,
+     "ok": true,
+     "limit": ">= 0.02",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_steel: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_steel: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_steel: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_steel: output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "mat_steel: image_nodes_have_image",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_steel: data_textures_non_color",
+     "value": [],
+     "ok": true,
+     "limit": "Non-Color"
+    },
+    {
+     "name": "mat_steel: metallic_binary",
+     "value": 1.0,
+     "ok": true,
+     "limit": "0/1",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_brass: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_brass: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_brass: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_brass: output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "mat_brass: image_nodes_have_image",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "mat_brass: data_textures_non_color",
+     "value": [],
+     "ok": true,
+     "limit": "Non-Color"
+    },
+    {
+     "name": "mat_brass: metallic_binary",
+     "value": 1.0,
+     "ok": true,
+     "limit": "0/1",
+     "severity": "warn"
+    },
+    {
+     "name": "mat_brass: roughness_floor",
+     "value": 0.28,
+     "ok": true,
+     "limit": ">= 0.02",
+     "severity": "warn"
+    }
+   ],
+   "info": {
+    "trees": {
+     "mat_wood": {
+      "nodes": 8,
+      "links": 9
+     },
+     "mat_dark_wood": {
+      "nodes": 8,
+      "links": 9
+     },
+     "mat_steel": {
+      "nodes": 7,
+      "links": 7
+     },
+     "mat_brass": {
+      "nodes": 2,
+      "links": 1
+     }
+    },
+    "materials": [
+     "mat_wood",
+     "mat_dark_wood",
+     "mat_steel",
+     "mat_brass"
+    ]
+   }
+  },
+  {
+   "gate": "camera-framing",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.1178,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.7001,
+     "ok": true,
+     "limit": ">= 0.5599999999999999"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.7001,
+     "ok": true,
+     "limit": "<= 0.895"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.239,
+      0.1178,
+      0.7589,
+      0.8179
+     ],
+     "fill": 0.3639,
+     "span": [
+      0.5199,
+      0.7001
+     ],
+     "fit": 0.7001,
+     "margin": 0.1178
+    },
+    "camera": "gauge_cam",
+    "lens_mm": 70,
+    "distance_m": 4.43,
+    "location": [
+     2.297,
+     -3.414,
+     1.92
+    ],
+    "target": [
+     0.0,
+     -0.009,
+     0.26
+    ]
+   }
+  },
+  {
+   "gate": "light-rig",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "lights_created",
+     "value": 3,
+     "ok": true,
+     "limit": ">= 1"
+    },
+    {
+     "name": "none_visible_to_camera",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "key_to_fill_ratio",
+     "value": 4.0,
+     "ok": true,
+     "limit": "0.8 .. 12",
+     "severity": "warn"
+    }
+   ],
+   "info": {
+    "ratio_key_fill": 4.0,
+    "subject_radius_m": 0.635,
+    "centre": [
+     0.0,
+     -0.009,
+     0.26
+    ],
+    "lights": [
+     {
+      "light": "rig_key",
+      "watts": 117.2,
+      "distance_m": 2.16,
+      "irradiance": 16.0
+     },
+     {
+      "light": "rig_fill",
+      "watts": 44.7,
+      "distance_m": 2.668,
+      "irradiance": 4.0
+     },
+     {
+      "light": "rig_rim",
+      "watts": 201.3,
+      "distance_m": 2.414,
+      "irradiance": 22.0
+     }
+    ],
+    "preset": "three_point"
+   }
+  },
+  {
+   "gate": "render-settings",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "engine",
+     "value": "CYCLES",
+     "ok": true,
+     "limit": "CYCLES or BLENDER_EEVEE"
+    },
+    {
+     "name": "cycles_samples",
+     "value": 256,
+     "ok": true,
+     "limit": ">= 8"
+    },
+    {
+     "name": "denoising_on",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "view_transform",
+     "value": "AgX",
+     "ok": true,
+     "limit": "AgX or Filmic",
+     "severity": "warn"
+    },
+    {
+     "name": "resolution",
+     "value": [
+      1280,
+      720
+     ],
+     "ok": true,
+     "limit": ">= 64 px"
+    }
+   ],
+   "info": {
+    "preset": "final",
+    "percent": 100,
+    "notes": [],
+    "output_px": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "gate": "render-check",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.1178,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.7001,
+     "ok": true,
+     "limit": ">= 0.4"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.7001,
+     "ok": true,
+     "limit": "<= 0.95"
+    },
+    {
+     "name": "area_lights_not_in_shot",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "clipped_white",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.02"
+    },
+    {
+     "name": "clipped_black",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.1"
+    },
+    {
+     "name": "contrast_p95_p5",
+     "value": 0.4687,
+     "ok": true,
+     "limit": ">= 0.2"
+    },
+    {
+     "name": "mean_luma",
+     "value": 0.58,
+     "ok": true,
+     "limit": "0.12..0.75"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.239,
+      0.1178,
+      0.7589,
+      0.8179
+     ],
+     "fill": 0.3639,
+     "span": [
+      0.5199,
+      0.7001
+     ],
+     "fit": 0.7001,
+     "margin": 0.1178
+    },
+    "image": {
+     "size": [
+      1280,
+      720
+     ],
+     "mean_luma": 0.58,
+     "p5": 0.3012,
+     "p95": 0.7699,
+     "clip_black": 0.0,
+     "clip_white": 0.0,
+     "mean_saturation": 0.1169,
+     "mean_rgb": [
+      0.6016,
+      0.5753,
+      0.5634
+     ],
+     "contrast": 0.4687,
+     "transparent": 0.0,
+     "palette": [
+      {
+       "hex": "#a6a5a7",
+       "share": 0.325
+      },
+      {
+       "hex": "#bebec0",
+       "share": 0.207
+      },
+      {
+       "hex": "#a37d5d",
+       "share": 0.176
+      },
+      {
+       "hex": "#828286",
+       "share": 0.154
+      },
+      {
+       "hex": "#505258",
+       "share": 0.138
+      }
+     ]
+    },
+    "out": "gallery/_work/crate.png"
+   }
+  }
+ ],
+ "terrain": [
+  {
+   "gate": "geonodes-make",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "height_grid: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "height_grid: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "height_grid: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "height_grid: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "produces_geometry",
+     "value": 6000,
+     "ok": true,
+     "limit": "> 0 instances or faces"
+    }
+   ],
+   "info": {
+    "trees": {
+     "height_grid": {
+      "nodes": 13,
+      "links": 25
+     }
+    },
+    "group": "height_grid",
+    "host": "terrain_field",
+    "instances": 6000,
+    "created": [],
+    "size_m": [
+     6.055,
+     3.655,
+     0.755
+    ],
+    "inputs": {
+     "Source": "Socket_1",
+     "Width": "Socket_2",
+     "Depth": "Socket_3",
+     "Res X": "Socket_4",
+     "Res Y": "Socket_5",
+     "Amplitude": "Socket_6",
+     "Noise Scale": "Socket_7",
+     "Detail": "Socket_8",
+     "Roughness": "Socket_9",
+     "Seed": "Socket_10",
+     "Cube Scale": "Socket_11"
+    }
+   }
+  },
+  {
+   "gate": "geonodes-health",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "hosts_found",
+     "value": [
+      "terrain_field"
+     ],
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "height_grid: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "height_grid: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "height_grid: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "height_grid: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "terrain_field: not_empty",
+     "value": 6000,
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "terrain_field: instances_min",
+     "value": 6000,
+     "ok": true,
+     "limit": ">= 2000"
+    },
+    {
+     "name": "terrain_field: neighbour_step",
+     "value": 0.12189,
+     "ok": true,
+     "limit": "<= 0.2"
+    }
+   ],
+   "info": {
+    "trees": {
+     "height_grid": {
+      "nodes": 13,
+      "links": 25
+     }
+    },
+    "objects": {
+     "terrain_field": {
+      "instances": 6000,
+      "faces": 0,
+      "size_m": [
+       6.055,
+       3.655,
+       0.755
+      ],
+      "grid": {
+       "cells": 6000,
+       "grid": [
+        100,
+        60
+       ],
+       "max_step": 0.12189,
+       "mean_step": 0.02542
+      }
+     }
+    }
+   }
+  },
+  {
+   "gate": "camera-framing",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.0278,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.88,
+     "ok": true,
+     "limit": ">= 0.7040000000000001"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.88,
+     "ok": true,
+     "limit": "<= 0.98"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.0278,
+      0.041,
+      0.9078,
+      0.8356
+     ],
+     "fill": 0.6993,
+     "span": [
+      0.88,
+      0.7946
+     ],
+     "fit": 0.88,
+     "margin": 0.0278
+    },
+    "camera": "gauge_cam",
+    "lens_mm": 55,
+    "distance_m": 12.009,
+    "location": [
+     2.409,
+     -9.66,
+     7.065
+    ],
+    "target": [
+     0.0,
+     0.0,
+     0.35
+    ]
+   }
+  },
+  {
+   "gate": "light-rig",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "lights_created",
+     "value": 3,
+     "ok": true,
+     "limit": ">= 1"
+    },
+    {
+     "name": "none_visible_to_camera",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "key_to_fill_ratio",
+     "value": 0.91,
+     "ok": true,
+     "limit": "0.8 .. 12",
+     "severity": "warn"
+    }
+   ],
+   "info": {
+    "ratio_key_fill": 0.91,
+    "subject_radius_m": 3.557,
+    "centre": [
+     0.0,
+     0.0,
+     0.35
+    ],
+    "lights": [
+     {
+      "light": "rig_top",
+      "watts": 1788.2,
+      "distance_m": 10.67,
+      "irradiance": 10.0
+     },
+     {
+      "light": "rig_strip_l",
+      "watts": 2526.6,
+      "distance_m": 12.092,
+      "irradiance": 11.0
+     },
+     {
+      "light": "rig_strip_r",
+      "watts": 2526.6,
+      "distance_m": 12.092,
+      "irradiance": 11.0
+     }
+    ],
+    "preset": "softbox_product"
+   }
+  },
+  {
+   "gate": "render-settings",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "engine",
+     "value": "CYCLES",
+     "ok": true,
+     "limit": "CYCLES or BLENDER_EEVEE"
+    },
+    {
+     "name": "cycles_samples",
+     "value": 256,
+     "ok": true,
+     "limit": ">= 8"
+    },
+    {
+     "name": "denoising_on",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "view_transform",
+     "value": "AgX",
+     "ok": true,
+     "limit": "AgX or Filmic",
+     "severity": "warn"
+    },
+    {
+     "name": "resolution",
+     "value": [
+      1280,
+      720
+     ],
+     "ok": true,
+     "limit": ">= 64 px"
+    }
+   ],
+   "info": {
+    "preset": "final",
+    "percent": 100,
+    "notes": [],
+    "output_px": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "gate": "render-check",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.0278,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.88,
+     "ok": true,
+     "limit": ">= 0.5"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.88,
+     "ok": true,
+     "limit": "<= 0.95"
+    },
+    {
+     "name": "area_lights_not_in_shot",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "clipped_white",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.02"
+    },
+    {
+     "name": "clipped_black",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.1"
+    },
+    {
+     "name": "contrast_p95_p5",
+     "value": 0.5511,
+     "ok": true,
+     "limit": ">= 0.2"
+    },
+    {
+     "name": "mean_luma",
+     "value": 0.2299,
+     "ok": true,
+     "limit": "0.12..0.75"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.0278,
+      0.041,
+      0.9078,
+      0.8356
+     ],
+     "fill": 0.6993,
+     "span": [
+      0.88,
+      0.7946
+     ],
+     "fit": 0.88,
+     "margin": 0.0278
+    },
+    "image": {
+     "size": [
+      1280,
+      720
+     ],
+     "mean_luma": 0.2299,
+     "p5": 0.0701,
+     "p95": 0.6212,
+     "clip_black": 0.0,
+     "clip_white": 0.0,
+     "mean_saturation": 0.4565,
+     "mean_rgb": [
+      0.1976,
+      0.2304,
+      0.3189
+     ],
+     "contrast": 0.5511,
+     "transparent": 0.0,
+     "palette": [
+      {
+       "hex": "#0e131a",
+       "share": 0.615
+      },
+      {
+       "hex": "#6682bb",
+       "share": 0.214
+      },
+      {
+       "hex": "#a589a4",
+       "share": 0.09
+      },
+      {
+       "hex": "#4b679c",
+       "share": 0.062
+      },
+      {
+       "hex": "#2f3a54",
+       "share": 0.02
+      }
+     ]
+    },
+    "out": "gallery/_work/terrain.png"
+   }
+  }
+ ],
+ "radial": [
+  {
+   "gate": "geonodes-make",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "radial_outer: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "radial_outer: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_outer: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_outer: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "produces_geometry",
+     "value": 48,
+     "ok": true,
+     "limit": "> 0 instances or faces"
+    }
+   ],
+   "info": {
+    "trees": {
+     "radial_outer": {
+      "nodes": 10,
+      "links": 15
+     }
+    },
+    "group": "radial_outer",
+    "host": "ring_outer",
+    "instances": 48,
+    "created": [],
+    "size_m": [
+     4.55,
+     4.55,
+     0.12
+    ],
+    "inputs": {
+     "Instance": "Socket_1",
+     "Count": "Socket_2",
+     "Radius": "Socket_3",
+     "Scale": "Socket_4"
+    }
+   }
+  },
+  {
+   "gate": "geonodes-make",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "radial_inner: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "radial_inner: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_inner: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_inner: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "produces_geometry",
+     "value": 18,
+     "ok": true,
+     "limit": "> 0 instances or faces"
+    }
+   ],
+   "info": {
+    "trees": {
+     "radial_inner": {
+      "nodes": 10,
+      "links": 15
+     }
+    },
+    "group": "radial_inner",
+    "host": "ring_inner",
+    "instances": 18,
+    "created": [],
+    "size_m": [
+     2.22,
+     2.214,
+     0.2
+    ],
+    "inputs": {
+     "Instance": "Socket_1",
+     "Count": "Socket_2",
+     "Radius": "Socket_3",
+     "Scale": "Socket_4"
+    }
+   }
+  },
+  {
+   "gate": "geonodes-health",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "hosts_found",
+     "value": [
+      "ring_outer"
+     ],
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "radial_outer: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "radial_outer: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_outer: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_outer: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "ring_outer: not_empty",
+     "value": 48,
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "ring_outer: instances_min",
+     "value": 48,
+     "ok": true,
+     "limit": ">= 48"
+    },
+    {
+     "name": "ring_outer: instances_max",
+     "value": 48,
+     "ok": true,
+     "limit": "<= 48"
+    }
+   ],
+   "info": {
+    "trees": {
+     "radial_outer": {
+      "nodes": 10,
+      "links": 15
+     }
+    },
+    "objects": {
+     "ring_outer": {
+      "instances": 48,
+      "faces": 0,
+      "size_m": [
+       4.55,
+       4.55,
+       0.12
+      ]
+     }
+    }
+   }
+  },
+  {
+   "gate": "geonodes-health",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "hosts_found",
+     "value": [
+      "ring_inner"
+     ],
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "radial_inner: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "radial_inner: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_inner: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "radial_inner: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "ring_inner: not_empty",
+     "value": 18,
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "ring_inner: instances_min",
+     "value": 18,
+     "ok": true,
+     "limit": ">= 18"
+    },
+    {
+     "name": "ring_inner: instances_max",
+     "value": 18,
+     "ok": true,
+     "limit": "<= 18"
+    }
+   ],
+   "info": {
+    "trees": {
+     "radial_inner": {
+      "nodes": 10,
+      "links": 15
+     }
+    },
+    "objects": {
+     "ring_inner": {
+      "instances": 18,
+      "faces": 0,
+      "size_m": [
+       2.22,
+       2.214,
+       0.2
+      ]
+     }
+    }
+   }
+  },
+  {
+   "gate": "camera-framing",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.03,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.8468,
+     "ok": true,
+     "limit": ">= 0.7200000000000001"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.8468,
+     "ok": true,
+     "limit": "<= 0.98"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.1972,
+      0.03,
+      0.7664,
+      0.8768
+     ],
+     "fill": 0.482,
+     "span": [
+      0.5692,
+      0.8468
+     ],
+     "fit": 0.8468,
+     "margin": 0.03
+    },
+    "camera": "gauge_cam",
+    "lens_mm": 50,
+    "distance_m": 14.243,
+    "location": [
+     2.71,
+     -8.34,
+     11.224
+    ],
+    "target": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "gate": "light-rig",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "lights_created",
+     "value": 3,
+     "ok": true,
+     "limit": ">= 1"
+    },
+    {
+     "name": "none_visible_to_camera",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "key_to_fill_ratio",
+     "value": 15.2,
+     "ok": false,
+     "limit": "0.8 .. 12",
+     "hint": "ratio outside a usable range",
+     "severity": "warn"
+    }
+   ],
+   "info": {
+    "ratio_key_fill": 15.2,
+    "subject_radius_m": 3.227,
+    "centre": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "lights": [
+     {
+      "light": "rig_key",
+      "watts": 2546.1,
+      "distance_m": 10.327,
+      "irradiance": 15.2
+     },
+     {
+      "light": "rig_rim",
+      "watts": 1700.7,
+      "distance_m": 12.263,
+      "irradiance": 7.2
+     },
+     {
+      "light": "rig_kick",
+      "watts": 331.2,
+      "distance_m": 14.522,
+      "irradiance": 1.0
+     }
+    ],
+    "preset": "dramatic"
+   }
+  },
+  {
+   "gate": "render-settings",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "engine",
+     "value": "CYCLES",
+     "ok": true,
+     "limit": "CYCLES or BLENDER_EEVEE"
+    },
+    {
+     "name": "cycles_samples",
+     "value": 256,
+     "ok": true,
+     "limit": ">= 8"
+    },
+    {
+     "name": "denoising_on",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "view_transform",
+     "value": "AgX",
+     "ok": true,
+     "limit": "AgX or Filmic",
+     "severity": "warn"
+    },
+    {
+     "name": "resolution",
+     "value": [
+      1280,
+      720
+     ],
+     "ok": true,
+     "limit": ">= 64 px"
+    }
+   ],
+   "info": {
+    "preset": "final",
+    "percent": 100,
+    "notes": [],
+    "output_px": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "gate": "render-check",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.03,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.8468,
+     "ok": true,
+     "limit": ">= 0.4"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.8468,
+     "ok": true,
+     "limit": "<= 0.95"
+    },
+    {
+     "name": "area_lights_not_in_shot",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "clipped_white",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.05"
+    },
+    {
+     "name": "clipped_black",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.1"
+    },
+    {
+     "name": "contrast_p95_p5",
+     "value": 0.3342,
+     "ok": true,
+     "limit": ">= 0.2"
+    },
+    {
+     "name": "mean_luma",
+     "value": 0.2791,
+     "ok": true,
+     "limit": "0.12..0.75"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.1972,
+      0.03,
+      0.7664,
+      0.8768
+     ],
+     "fill": 0.482,
+     "span": [
+      0.5692,
+      0.8468
+     ],
+     "fit": 0.8468,
+     "margin": 0.03
+    },
+    "image": {
+     "size": [
+      1280,
+      720
+     ],
+     "mean_luma": 0.2791,
+     "p5": 0.1406,
+     "p95": 0.4748,
+     "clip_black": 0.0,
+     "clip_white": 0.0,
+     "mean_saturation": 0.0923,
+     "mean_rgb": [
+      0.2835,
+      0.2778,
+      0.2789
+     ],
+     "contrast": 0.3342,
+     "transparent": 0.0,
+     "palette": [
+      {
+       "hex": "#393839",
+       "share": 0.386
+      },
+      {
+       "hex": "#4e4f50",
+       "share": 0.292
+      },
+      {
+       "hex": "#6e6e70",
+       "share": 0.17
+      },
+      {
+       "hex": "#2c2722",
+       "share": 0.142
+      },
+      {
+       "hex": "#f0c0a7",
+       "share": 0.011
+      }
+     ]
+    },
+    "out": "gallery/_work/radial.png"
+   }
+  }
+ ],
+ "scatter": [
+  {
+   "gate": "geonodes-make",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "scatter_surface: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "scatter_surface: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "scatter_surface: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "scatter_surface: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "produces_geometry",
+     "value": 8089,
+     "ok": true,
+     "limit": "> 0 instances or faces"
+    }
+   ],
+   "info": {
+    "trees": {
+     "scatter_surface": {
+      "nodes": 10,
+      "links": 17
+     }
+    },
+    "group": "scatter_surface",
+    "host": "scatter_field",
+    "instances": 8089,
+    "created": [],
+    "size_m": [
+     3.07,
+     3.057,
+     0.48
+    ],
+    "inputs": {
+     "Target": "Socket_1",
+     "Instance": "Socket_2",
+     "Density": "Socket_3",
+     "Seed": "Socket_4",
+     "Min Scale": "Socket_5",
+     "Max Scale": "Socket_6"
+    }
+   }
+  },
+  {
+   "gate": "geonodes-health",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "hosts_found",
+     "value": [
+      "scatter_field"
+     ],
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "scatter_surface: valid_links",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "scatter_surface: unused_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "scatter_surface: muted_nodes",
+     "value": [],
+     "ok": true,
+     "limit": "none",
+     "severity": "warn"
+    },
+    {
+     "name": "scatter_surface: group_output_connected",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "scatter_field: not_empty",
+     "value": 8089,
+     "ok": true,
+     "limit": "> 0"
+    },
+    {
+     "name": "scatter_field: instances_min",
+     "value": 8089,
+     "ok": true,
+     "limit": ">= 2000"
+    }
+   ],
+   "info": {
+    "trees": {
+     "scatter_surface": {
+      "nodes": 10,
+      "links": 17
+     }
+    },
+    "objects": {
+     "scatter_field": {
+      "instances": 8089,
+      "faces": 0,
+      "size_m": [
+       3.07,
+       3.057,
+       0.48
+      ]
+     }
+    }
+   }
+  },
+  {
+   "gate": "camera-framing",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.0486,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.8,
+     "ok": true,
+     "limit": ">= 0.6400000000000001"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.8,
+     "ok": true,
+     "limit": "<= 0.98"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.0597,
+      0.0486,
+      0.8598,
+      0.7994
+     ],
+     "fill": 0.6007,
+     "span": [
+      0.8,
+      0.7509
+     ],
+     "fit": 0.8,
+     "margin": 0.0486
+    },
+    "camera": "gauge_cam",
+    "lens_mm": 60,
+    "distance_m": 8.369,
+    "location": [
+     2.617,
+     -7.188,
+     3.644
+    ],
+    "target": [
+     0.002,
+     -0.003,
+     0.24
+    ]
+   }
+  },
+  {
+   "gate": "light-rig",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "lights_created",
+     "value": 1,
+     "ok": true,
+     "limit": ">= 1"
+    },
+    {
+     "name": "none_visible_to_camera",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    }
+   ],
+   "info": {
+    "subject_radius_m": 2.121,
+    "centre": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "lights": [
+     {
+      "light": "rig_sky",
+      "watts": 1017.9,
+      "distance_m": 8.485,
+      "irradiance": 9.0
+     }
+    ],
+    "preset": "overcast"
+   }
+  },
+  {
+   "gate": "render-settings",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "engine",
+     "value": "CYCLES",
+     "ok": true,
+     "limit": "CYCLES or BLENDER_EEVEE"
+    },
+    {
+     "name": "cycles_samples",
+     "value": 256,
+     "ok": true,
+     "limit": ">= 8"
+    },
+    {
+     "name": "denoising_on",
+     "value": true,
+     "ok": true,
+     "limit": true
+    },
+    {
+     "name": "view_transform",
+     "value": "AgX",
+     "ok": true,
+     "limit": "AgX or Filmic",
+     "severity": "warn"
+    },
+    {
+     "name": "resolution",
+     "value": [
+      1280,
+      720
+     ],
+     "ok": true,
+     "limit": ">= 64 px"
+    }
+   ],
+   "info": {
+    "preset": "final",
+    "percent": 100,
+    "notes": [],
+    "output_px": [
+     1280,
+     720
+    ]
+   }
+  },
+  {
+   "gate": "render-check",
+   "pass": true,
+   "failed": [],
+   "checks": [
+    {
+     "name": "camera_exists",
+     "value": "gauge_cam",
+     "ok": true,
+     "limit": "set"
+    },
+    {
+     "name": "subject_in_front_of_camera",
+     "value": false,
+     "ok": true,
+     "limit": false
+    },
+    {
+     "name": "subject_inside_frame_margin",
+     "value": 0.0588,
+     "ok": true,
+     "limit": ">= 0.0"
+    },
+    {
+     "name": "subject_fit_min",
+     "value": 0.7637,
+     "ok": true,
+     "limit": ">= 0.4"
+    },
+    {
+     "name": "subject_fit_max",
+     "value": 0.7637,
+     "ok": true,
+     "limit": "<= 0.95"
+    },
+    {
+     "name": "area_lights_not_in_shot",
+     "value": [],
+     "ok": true,
+     "limit": "none"
+    },
+    {
+     "name": "clipped_white",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.02"
+    },
+    {
+     "name": "clipped_black",
+     "value": 0.0,
+     "ok": true,
+     "limit": "<= 0.1"
+    },
+    {
+     "name": "contrast_p95_p5",
+     "value": 0.2225,
+     "ok": true,
+     "limit": ">= 0.15"
+    },
+    {
+     "name": "mean_luma",
+     "value": 0.646,
+     "ok": true,
+     "limit": "0.12..0.75"
+    }
+   ],
+   "info": {
+    "framing": {
+     "behind_camera": false,
+     "corners_inside": 8,
+     "bbox": [
+      0.0811,
+      0.0588,
+      0.8449,
+      0.6635
+     ],
+     "fill": 0.4618,
+     "span": [
+      0.7637,
+      0.6047
+     ],
+     "fit": 0.7637,
+     "margin": 0.0588
+    },
+    "image": {
+     "size": [
+      1280,
+      720
+     ],
+     "mean_luma": 0.646,
+     "p5": 0.4863,
+     "p95": 0.7088,
+     "clip_black": 0.0,
+     "clip_white": 0.0,
+     "mean_saturation": 0.2465,
+     "mean_rgb": [
+      0.5831,
+      0.672,
+      0.5721
+     ],
+     "contrast": 0.2225,
+     "transparent": 0.0,
+     "palette": [
+      {
+       "hex": "#aeb6bc",
+       "share": 0.627
+      },
+      {
+       "hex": "#61963b",
+       "share": 0.224
+      },
+      {
+       "hex": "#6c9c4c",
+       "share": 0.101
+      },
+      {
+       "hex": "#81a470",
+       "share": 0.025
+      },
+      {
+       "hex": "#99ad9a",
+       "share": 0.023
+      }
+     ]
+    },
+    "out": "gallery/_work/scatter.png"
+   }
+  }
+ ],
+ "match": {
+  "rounds": [
+   {
+    "round": 0,
+    "image": "match_0.png",
+    "pass": false,
+    "failed": [
+     "exposure_stops",
+     "contrast_ratio",
+     "tint_red",
+     "tint_green",
+     "tint_blue",
+     "mean_abs_error"
+    ],
+    "delta": {
+     "mean_abs_error": 0.1567,
+     "exposure_stops": 0.682,
+     "luma_shift": 0.1539,
+     "rgb_shift": [
+      0.1342,
+      0.1572,
+      0.1787
+     ],
+     "contrast_ratio": 0.798,
+     "luma_correlation": 0.9941
+    }
+   },
+   {
+    "round": 1,
+    "image": "match_1.png",
+    "pass": false,
+    "failed": [
+     "exposure_stops",
+     "tint_red",
+     "tint_green",
+     "tint_blue",
+     "mean_abs_error"
+    ],
+    "delta": {
+     "mean_abs_error": 0.0825,
+     "exposure_stops": 0.372,
+     "luma_shift": 0.0804,
+     "rgb_shift": [
+      0.0732,
+      0.0812,
+      0.0931
+     ],
+     "contrast_ratio": 0.914,
+     "luma_correlation": 0.9982
+    }
+   },
+   {
+    "round": 2,
+    "image": "match_2.png",
+    "pass": false,
+    "failed": [
+     "tint_blue"
+    ],
+    "delta": {
+     "mean_abs_error": 0.0376,
+     "exposure_stops": 0.173,
+     "luma_shift": 0.0364,
+     "rgb_shift": [
+      0.0361,
+      0.0361,
+      0.0408
+     ],
+     "contrast_ratio": 0.959,
+     "luma_correlation": 0.9997
+    }
+   },
+   {
+    "round": 3,
+    "image": "match_3.png",
+    "pass": true,
+    "failed": [],
+    "delta": {
+     "mean_abs_error": 0.0157,
+     "exposure_stops": 0.071,
+     "luma_shift": 0.0152,
+     "rgb_shift": [
+      0.0164,
+      0.0147,
+      0.0161
+     ],
+     "contrast_ratio": 0.976,
+     "luma_correlation": 0.9999
+    }
+   }
+  ],
+  "samples": 24,
+  "start": "lights x3, colour (0.75, 0.85, 1.0), world x3"
+ }
+}

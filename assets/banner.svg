@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 480" width="800" height="240" role="img" aria-label="Blender Gauge">
+  <defs>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7cf0dc"/><stop offset="1" stop-color="#2cc4b0"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a9d93"/><stop offset="1" stop-color="#1a6f78"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b4fd0"/><stop offset="1" stop-color="#352a8f"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2040"/><stop offset="1" stop-color="#0f1226"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="480" rx="56" fill="url(#bg)"/>
+  <!-- faint node-graph decoration on the right -->
+  <g fill="none" stroke="#7cf0dc" stroke-opacity="0.18" stroke-width="6" stroke-linecap="round">
+    <path d="M1240 120 C1320 120, 1320 240, 1400 240"/>
+    <path d="M1400 240 C1470 240, 1470 360, 1540 360"/>
+    <path d="M1240 120 C1290 120, 1300 70, 1360 70"/>
+  </g>
+  <g fill="#7cf0dc" fill-opacity="0.28">
+    <circle cx="1240" cy="120" r="14"/><circle cx="1400" cy="240" r="14"/>
+    <circle cx="1540" cy="360" r="14"/><circle cx="1360" cy="70" r="14"/>
+  </g>
+  <!-- icon (512 viewBox scaled to 360) -->
+  <g transform="translate(70 60) scale(0.703)">
+    <g stroke="#14172e" stroke-width="10" stroke-linejoin="round">
+      <path d="M256 70 L405 156 L256 242 L107 156 Z" fill="url(#top)"/>
+      <path d="M107 156 L256 242 L256 424 L107 338 Z" fill="url(#left)"/>
+      <path d="M405 156 L405 338 L256 424 L256 242 Z" fill="url(#right)"/>
+    </g>
+    <g fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round">
+      <path d="M170 290 C 210 290, 214 330, 256 330"/>
+      <path d="M256 330 C 300 330, 304 270, 346 270"/>
+      <path d="M170 290 C 190 240, 230 190, 256 156"/>
+    </g>
+    <g stroke="#14172e" stroke-width="8">
+      <circle cx="170" cy="290" r="21" fill="#ffffff"/>
+      <circle cx="256" cy="330" r="21" fill="#ffd166"/>
+      <circle cx="346" cy="270" r="21" fill="#ffffff"/>
+      <circle cx="256" cy="156" r="19" fill="#ff6b8b"/>
+    </g>
+    <path d="M430 40 L441 76 L477 87 L441 98 L430 134 L419 98 L383 87 L419 76 Z" fill="#ffd166" stroke="#14172e" stroke-width="7" stroke-linejoin="round"/>
+  </g>
+  <!-- wordmark -->
+  <g font-family="Inter, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-weight="800">
+    <text x="470" y="238" font-size="124" fill="#ffffff">Blender</text>
+    <text x="470" y="360" font-size="124" fill="#7cf0dc">Gauge</text>
+  </g>
+  <text x="474" y="418" font-family="Inter, 'Segoe UI', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="34" font-weight="500" fill="#aab0d6">Skills that measure their own work in Blender 5.x</text>
+</svg>

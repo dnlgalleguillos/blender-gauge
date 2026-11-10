@@ -1,0 +1,304 @@
+{
+ "description": "A flat grid of points lifted by 4D fBM noise, with one cube instanced on every point. The normalised noise is stored on the points as the attribute 'height' (0..1) so a shader can colour by it with an Attribute node of type Instancer.",
+ "interface": {
+  "inputs": [
+   {
+    "name": "Source",
+    "type": "Object"
+   },
+   {
+    "name": "Width",
+    "type": "Float",
+    "default": 5.0,
+    "min": 0.1,
+    "max": 200
+   },
+   {
+    "name": "Depth",
+    "type": "Float",
+    "default": 4.0,
+    "min": 0.1,
+    "max": 200
+   },
+   {
+    "name": "Res X",
+    "type": "Int",
+    "default": 60,
+    "min": 2,
+    "max": 400
+   },
+   {
+    "name": "Res Y",
+    "type": "Int",
+    "default": 48,
+    "min": 2,
+    "max": 400
+   },
+   {
+    "name": "Amplitude",
+    "type": "Float",
+    "default": 0.35,
+    "min": 0,
+    "max": 20
+   },
+   {
+    "name": "Noise Scale",
+    "type": "Float",
+    "default": 1.6,
+    "min": 0.01,
+    "max": 50
+   },
+   {
+    "name": "Detail",
+    "type": "Float",
+    "default": 6.0,
+    "min": 0,
+    "max": 15
+   },
+   {
+    "name": "Roughness",
+    "type": "Float",
+    "default": 0.45,
+    "min": 0,
+    "max": 1
+   },
+   {
+    "name": "Seed",
+    "type": "Float",
+    "default": 0.0,
+    "min": -1000,
+    "max": 1000
+   },
+   {
+    "name": "Cube Scale",
+    "type": "Float",
+    "default": 0.05,
+    "min": 0.001,
+    "max": 5
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Geometry",
+    "type": "Geometry"
+   }
+  ]
+ },
+ "nodes": {
+  "gin": {
+   "type": "NodeGroupInput",
+   "at": [
+    -1400,
+    0
+   ]
+  },
+  "grid": {
+   "type": "GeometryNodeMeshGrid",
+   "at": [
+    -1100,
+    200
+   ]
+  },
+  "pos": {
+   "type": "GeometryNodeInputPosition",
+   "at": [
+    -1100,
+    -120
+   ]
+  },
+  "noise": {
+   "type": "ShaderNodeTexNoise",
+   "at": [
+    -850,
+    -120
+   ],
+   "set": {
+    "noise_dimensions": "4D",
+    "normalize": true
+   }
+  },
+  "lift": {
+   "type": "ShaderNodeMapRange",
+   "at": [
+    -560,
+    -120
+   ],
+   "in": {
+    "From Min": 0.3,
+    "From Max": 0.7,
+    "To Min": 0.0
+   }
+  },
+  "up": {
+   "type": "ShaderNodeCombineXYZ",
+   "at": [
+    -330,
+    -120
+   ]
+  },
+  "setpos": {
+   "type": "GeometryNodeSetPosition",
+   "at": [
+    -120,
+    160
+   ]
+  },
+  "norm": {
+   "type": "ShaderNodeMapRange",
+   "at": [
+    -560,
+    -420
+   ],
+   "in": {
+    "From Min": 0.3,
+    "From Max": 0.7,
+    "To Min": 0.0,
+    "To Max": 1.0
+   }
+  },
+  "store": {
+   "type": "GeometryNodeStoreNamedAttribute",
+   "at": [
+    120,
+    160
+   ],
+   "set": {
+    "data_type": "FLOAT",
+    "domain": "POINT"
+   },
+   "in": {
+    "Name": "height"
+   }
+  },
+  "src": {
+   "type": "GeometryNodeObjectInfo",
+   "at": [
+    120,
+    -200
+   ]
+  },
+  "size": {
+   "type": "ShaderNodeCombineXYZ",
+   "at": [
+    120,
+    -420
+   ]
+  },
+  "inst": {
+   "type": "GeometryNodeInstanceOnPoints",
+   "at": [
+    380,
+    100
+   ]
+  },
+  "out": {
+   "type": "NodeGroupOutput",
+   "at": [
+    640,
+    100
+   ]
+  }
+ },
+ "links": [
+  [
+   "gin.Width",
+   "grid.Size X"
+  ],
+  [
+   "gin.Depth",
+   "grid.Size Y"
+  ],
+  [
+   "gin.Res X",
+   "grid.Vertices X"
+  ],
+  [
+   "gin.Res Y",
+   "grid.Vertices Y"
+  ],
+  [
+   "pos.Position",
+   "noise.Vector"
+  ],
+  [
+   "gin.Seed",
+   "noise.W"
+  ],
+  [
+   "gin.Noise Scale",
+   "noise.Scale"
+  ],
+  [
+   "gin.Detail",
+   "noise.Detail"
+  ],
+  [
+   "gin.Roughness",
+   "noise.Roughness"
+  ],
+  [
+   "noise.Fac",
+   "lift.Value"
+  ],
+  [
+   "gin.Amplitude",
+   "lift.To Max"
+  ],
+  [
+   "lift.Result",
+   "up.Z"
+  ],
+  [
+   "grid.Mesh",
+   "setpos.Geometry"
+  ],
+  [
+   "up.Vector",
+   "setpos.Offset"
+  ],
+  [
+   "noise.Fac",
+   "norm.Value"
+  ],
+  [
+   "setpos.Geometry",
+   "store.Geometry"
+  ],
+  [
+   "norm.Result",
+   "store.Value"
+  ],
+  [
+   "gin.Source",
+   "src.Object"
+  ],
+  [
+   "gin.Cube Scale",
+   "size.X"
+  ],
+  [
+   "gin.Cube Scale",
+   "size.Y"
+  ],
+  [
+   "gin.Cube Scale",
+   "size.Z"
+  ],
+  [
+   "store.Geometry",
+   "inst.Points"
+  ],
+  [
+   "src.Geometry",
+   "inst.Instance"
+  ],
+  [
+   "size.Vector",
+   "inst.Scale"
+  ],
+  [
+   "inst.Instances",
+   "out.Geometry"
+  ]
+ ]
+}

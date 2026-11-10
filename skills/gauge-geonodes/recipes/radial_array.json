@@ -1,0 +1,184 @@
+{
+ "description": "N copies of an object around a circle, each turned to face outward.",
+ "interface": {
+  "inputs": [
+   {
+    "name": "Instance",
+    "type": "Object"
+   },
+   {
+    "name": "Count",
+    "type": "Int",
+    "default": 12,
+    "min": 1,
+    "max": 1000
+   },
+   {
+    "name": "Radius",
+    "type": "Float",
+    "default": 1.0,
+    "min": 0.0,
+    "max": 100
+   },
+   {
+    "name": "Scale",
+    "type": "Float",
+    "default": 1.0,
+    "min": 0.001,
+    "max": 100
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Geometry",
+    "type": "Geometry"
+   }
+  ]
+ },
+ "nodes": {
+  "gin": {
+   "type": "NodeGroupInput",
+   "at": [
+    -900,
+    0
+   ]
+  },
+  "ring": {
+   "type": "GeometryNodeMeshCircle",
+   "at": [
+    -600,
+    200
+   ],
+   "set": {
+    "fill_type": "NONE"
+   }
+  },
+  "idx": {
+   "type": "GeometryNodeInputIndex",
+   "at": [
+    -900,
+    -250
+   ]
+  },
+  "step": {
+   "type": "ShaderNodeMath",
+   "at": [
+    -650,
+    -350
+   ],
+   "set": {
+    "operation": "DIVIDE"
+   },
+   "in": {
+    "Value": 6.283185307
+   }
+  },
+  "turn": {
+   "type": "ShaderNodeMath",
+   "at": [
+    -400,
+    -250
+   ],
+   "set": {
+    "operation": "MULTIPLY"
+   }
+  },
+  "rot": {
+   "type": "ShaderNodeCombineXYZ",
+   "at": [
+    -170,
+    -250
+   ]
+  },
+  "src": {
+   "type": "GeometryNodeObjectInfo",
+   "at": [
+    -170,
+    -30
+   ]
+  },
+  "size": {
+   "type": "ShaderNodeCombineXYZ",
+   "at": [
+    -170,
+    -480
+   ]
+  },
+  "inst": {
+   "type": "GeometryNodeInstanceOnPoints",
+   "at": [
+    120,
+    80
+   ]
+  },
+  "out": {
+   "type": "NodeGroupOutput",
+   "at": [
+    380,
+    80
+   ]
+  }
+ },
+ "links": [
+  [
+   "gin.Count",
+   "ring.Vertices"
+  ],
+  [
+   "gin.Radius",
+   "ring.Radius"
+  ],
+  [
+   "gin.Count",
+   "step.Value_001"
+  ],
+  [
+   "idx.Index",
+   "turn.Value"
+  ],
+  [
+   "step.Value",
+   "turn.Value_001"
+  ],
+  [
+   "turn.Value",
+   "rot.Z"
+  ],
+  [
+   "gin.Instance",
+   "src.Object"
+  ],
+  [
+   "gin.Scale",
+   "size.X"
+  ],
+  [
+   "gin.Scale",
+   "size.Y"
+  ],
+  [
+   "gin.Scale",
+   "size.Z"
+  ],
+  [
+   "ring.Mesh",
+   "inst.Points"
+  ],
+  [
+   "src.Geometry",
+   "inst.Instance"
+  ],
+  [
+   "rot.Vector",
+   "inst.Rotation"
+  ],
+  [
+   "size.Vector",
+   "inst.Scale"
+  ],
+  [
+   "inst.Instances",
+   "out.Geometry"
+  ]
+ ]
+}

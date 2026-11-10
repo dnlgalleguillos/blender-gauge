@@ -1,0 +1,208 @@
+{
+ "description": "Scatter copies of an object over the surface of another, with random size and spin per copy. Put the modifier on any host object; the target's shape is read through Object Info.",
+ "interface": {
+  "inputs": [
+   {
+    "name": "Target",
+    "type": "Object"
+   },
+   {
+    "name": "Instance",
+    "type": "Object"
+   },
+   {
+    "name": "Density",
+    "type": "Float",
+    "default": 40.0,
+    "min": 0,
+    "max": 100000
+   },
+   {
+    "name": "Seed",
+    "type": "Int",
+    "default": 0,
+    "min": 0,
+    "max": 100000
+   },
+   {
+    "name": "Min Scale",
+    "type": "Float",
+    "default": 0.6,
+    "min": 0.001,
+    "max": 100
+   },
+   {
+    "name": "Max Scale",
+    "type": "Float",
+    "default": 1.4,
+    "min": 0.001,
+    "max": 100
+   }
+  ],
+  "outputs": [
+   {
+    "name": "Geometry",
+    "type": "Geometry"
+   }
+  ]
+ },
+ "nodes": {
+  "gin": {
+   "type": "NodeGroupInput",
+   "at": [
+    -1000,
+    0
+   ]
+  },
+  "tgt": {
+   "type": "GeometryNodeObjectInfo",
+   "at": [
+    -760,
+    260
+   ],
+   "set": {
+    "transform_space": "RELATIVE"
+   }
+  },
+  "dist": {
+   "type": "GeometryNodeDistributePointsOnFaces",
+   "at": [
+    -500,
+    260
+   ],
+   "set": {
+    "distribute_method": "RANDOM"
+   }
+  },
+  "size": {
+   "type": "FunctionNodeRandomValue",
+   "at": [
+    -500,
+    -60
+   ],
+   "set": {
+    "data_type": "FLOAT"
+   }
+  },
+  "spin": {
+   "type": "FunctionNodeRandomValue",
+   "at": [
+    -500,
+    -330
+   ],
+   "set": {
+    "data_type": "FLOAT"
+   },
+   "in": {
+    "Min": 0.0,
+    "Max": 6.283185307,
+    "Seed": 7
+   }
+  },
+  "scale3": {
+   "type": "ShaderNodeCombineXYZ",
+   "at": [
+    -230,
+    -60
+   ]
+  },
+  "rot3": {
+   "type": "ShaderNodeCombineXYZ",
+   "at": [
+    -230,
+    -330
+   ]
+  },
+  "src": {
+   "type": "GeometryNodeObjectInfo",
+   "at": [
+    -230,
+    -560
+   ]
+  },
+  "inst": {
+   "type": "GeometryNodeInstanceOnPoints",
+   "at": [
+    60,
+    80
+   ]
+  },
+  "out": {
+   "type": "NodeGroupOutput",
+   "at": [
+    320,
+    80
+   ]
+  }
+ },
+ "links": [
+  [
+   "gin.Target",
+   "tgt.Object"
+  ],
+  [
+   "tgt.Geometry",
+   "dist.Mesh"
+  ],
+  [
+   "gin.Density",
+   "dist.Density"
+  ],
+  [
+   "gin.Seed",
+   "dist.Seed"
+  ],
+  [
+   "gin.Min Scale",
+   "size.Min"
+  ],
+  [
+   "gin.Max Scale",
+   "size.Max"
+  ],
+  [
+   "gin.Seed",
+   "size.Seed"
+  ],
+  [
+   "size.Value",
+   "scale3.X"
+  ],
+  [
+   "size.Value",
+   "scale3.Y"
+  ],
+  [
+   "size.Value",
+   "scale3.Z"
+  ],
+  [
+   "spin.Value",
+   "rot3.Z"
+  ],
+  [
+   "gin.Instance",
+   "src.Object"
+  ],
+  [
+   "dist.Points",
+   "inst.Points"
+  ],
+  [
+   "src.Geometry",
+   "inst.Instance"
+  ],
+  [
+   "rot3.Vector",
+   "inst.Rotation"
+  ],
+  [
+   "scale3.Vector",
+   "inst.Scale"
+  ],
+  [
+   "inst.Instances",
+   "out.Geometry"
+  ]
+ ]
+}
