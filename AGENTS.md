@@ -6,7 +6,7 @@ Skills for AI agents working in Blender 5.x. Each skill builds something and end
 - `skills/gauge-*/SKILL.md` + `scripts/` (+ `recipes/`, `references/`): one folder per skill, installable on its own.
 - `lib/gauge.py`: the only shared module. Every skill carries a synced copy in `scripts/gauge.py`.
 - `tests/in_blender/*_tests.py`: one headless Blender launch per file; `tests/test_skills.py` wraps them for unittest.
-- `gallery/`: scenes that produce the README renders using only the skills' scripts; `tools/` repo tooling.
+- `gallery/`: scenes that produce the README renders using only the skills' scripts; `examples/`: full projects built with the skills (each with a README and a test); `tools/` repo tooling.
 
 ## Commands
 ```

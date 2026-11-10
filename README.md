@@ -26,6 +26,12 @@ Every image below was produced by the skills' own scripts (`gallery/`), and ever
 | ![Terrain](assets/gallery/terrain.jpg)<br>**Noise landscape** (`gauge-geonodes`): 6000 instanced cubes, colour read from a stored `height` attribute. Largest step between neighbours 0.12 m, checked by the gate. | ![Radial](assets/gallery/radial.jpg)<br>**Radial arrays** (`gauge-geonodes`): 48 + 18 instances placed on circles of exact radius (measured, not eyeballed), dramatic rig. |
 | ![Scatter](assets/gallery/scatter.jpg)<br>**Surface scatter** (`gauge-geonodes`): 8089 blades with random size and spin, overcast light, depth of field. | ![Reference match](assets/gallery/match.jpg)<br>**Reference matching** (`gauge-reference`): lighting made 3x too bright and blue on purpose; each round applies the correction the gate asked for. Error 0.157 -> 0.083 -> 0.038 -> 0.016, pass on round 4. |
 
+## Example
+
+[`examples/wavy-cubes`](examples/wavy-cubes/README.md) builds a full scene end to end: a bevelled cube instanced 12 996 times over a noise-lifted grid, two-colour material read from a stored attribute, grazing camera with depth of field, 1920x1080 Cycles render. It shows the measured decisions along the way (noise roughness vs neighbour steps, a check that no grid edge is visible).
+
+[![Wavy cubes](examples/wavy-cubes/wavy_final.jpg)](examples/wavy-cubes/README.md)
+
 ## Skills
 
 | Skill | What it does | Its gate checks |
@@ -69,7 +75,7 @@ FAIL mesh-health
 
 ```bash
 python tools/check_repo.py      # static checks, no Blender
-python tools/run_tests.py       # + 65 tests, one headless Blender launch per suite
+python tools/run_tests.py       # + 68 tests, one headless Blender launch per suite
 python gallery/build_gallery.py # re-render the gallery (add --quick for a fast pass)
 ```
 

@@ -94,6 +94,16 @@ def main():
         err("no skills found")
     for d in dirs:
         check_skill(d)
+    for ex in sorted((ROOT / "examples").glob("*/build_*.py")) if (ROOT / "examples").is_dir() else []:
+        src = ex.read_text()
+        if "Usage" not in (ast.get_docstring(ast.parse(src)) or ""):
+            err(f"{ex.relative_to(ROOT)}: module docstring needs a Usage section")
+        if not (ex.parent / "README.md").exists():
+            err(f"{ex.parent.relative_to(ROOT)}: example has no README.md")
+    for path in ROOT.rglob("*"):  # nothing in the repo may point at one person's machine
+        if path.is_file() and not {".git", "_work", "_out", "__pycache__"} & set(path.parts) and path.suffix in {".py", ".md", ".json", ".yml"}:
+            if "/home/" in path.read_text(errors="ignore") and path.name != "check_repo.py":
+                err(f"{path.relative_to(ROOT)}: contains an absolute /home/ path")
     lib = (ROOT / "lib" / "gauge.py").read_bytes()
     for d in dirs:
         cp = d / "scripts" / "gauge.py"

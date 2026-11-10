@@ -85,8 +85,9 @@ def main():
             gates[name] = json.loads(gj.read_text())
     if (WORK / "match.json").exists():
         gates["match"] = json.loads((WORK / "match.json").read_text())
-    if gates:
-        (OUT / "gates.json").write_text(json.dumps(gates, indent=1))
+    if gates:  # published file: no absolute paths from the machine that rendered it
+        text = json.dumps(gates, indent=1).replace(str(ROOT) + "/", "").replace(str(pathlib.Path.home()) + "/", "~/")
+        (OUT / "gates.json").write_text(text)
     print("done:", ", ".join(sorted(p.name for p in OUT.glob("*"))))
 
 

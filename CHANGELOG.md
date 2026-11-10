@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+- `examples/wavy-cubes`: a full procedural scene (instanced bevelled cubes, noise-lifted grid, attribute-driven two-colour material, grazing camera with DoF) with its render, README and 3 tests.
+- CI: GitHub Actions runs the static checks on every push and pull request.
+
 ## 0.1.0
 First release. Written from scratch.
 - `lib/gauge.py`: reports with value / limit / hint, parameter handling, mesh and scene measurements, camera framing, image statistics and comparison, node-tree dump / build / text, Geometry Nodes helpers (`gn_make`, `gn_set`, `instance_count`), isolated workspaces.
