@@ -1,0 +1,17 @@
+name: check
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Every skill carries the current lib/gauge.py
+        run: python tools/sync_lib.py --check
+      - name: Skills, scripts and docs are consistent
+        run: python tools/check_repo.py
